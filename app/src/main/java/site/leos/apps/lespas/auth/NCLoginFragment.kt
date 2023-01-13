@@ -284,7 +284,7 @@ class NCLoginFragment: Fragment() {
         if (Pattern.compile("^https?://[-a-zA-Z0-9+&@#/%?=~_|!:,.;\\[\\]]*[-a-zA-Z0-9\\]+&@#/%=~_|]").matcher(hostUrl).matches()) {
             disableInputWhilePinging()
             authenticateModel.setToken(username, token)
-            authenticateModel.pingServer(hostUrl, false)
+            authenticateModel.pingServer(hostUrl, true)
         } else hostEditText.error = getString(R.string.host_address_validation_error)
     }
 
